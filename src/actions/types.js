@@ -1,0 +1,5 @@
+export const ADD_CONTACT = 'ADD_CONTACT';
+export const DELETE_CONTACT = 'DELETE_CONTACT';
+export const SAVE_CONTACT = 'SAVE_CONTACT';
+export const ADD_FAVOURITE = 'ADD_FAVOURITE';
+export const DELETE_FAVOURITE = 'DELETE_FAVOURITE';
