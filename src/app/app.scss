@@ -4,3 +4,42 @@
   align-items: center;
   width: 100%;
 }
+
+.contact-margin {
+  margin: 10px;
+}
+
+.modal {
+  width: 50%;
+  height: 50%;
+  background-color: white;
+}
+
+.contact-edit-modal {
+  width: 50%;
+  min-width: 900px;
+  height: 50px;
+  background-color: white;
+}
+
+.blank {
+  height: 50px;
+}
+
+.name-width {
+  width: 300px;
+}
+
+.phone-width {
+  width: 200px;
+}
+
+.email-width {
+  width: 300px;
+}
+
+.button {
+  width: 100px;
+  height: 30px;
+  margin: auto 10px;
+}

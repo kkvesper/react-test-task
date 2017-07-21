@@ -10,19 +10,21 @@ const resolveButtonLabel = (children, label) => {
   return 'Label';
 };
 
-const Button = ({ children, label, onClick }) => (
-  <button onClick={onClick}>{resolveButtonLabel(children, label)}</button>
+const Button = ({ className, children, label, onClick }) => (
+  <button className={className} onClick={onClick}>{resolveButtonLabel(children, label)}</button>
 );
 
 Button.propTypes = {
   children: PropTypes.string,
   label: PropTypes.string,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  className: PropTypes.string.isRequired
 };
 
 Button.defaultProps = {
   label: null,
-  children: null
+  children: null,
+  className: 'button'
 };
 
 export default Button;
