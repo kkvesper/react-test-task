@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './app.scss';
+import './app.less';
 import { Column, Row, Title, Button } from '../components';
 
 const onAddClick = (event) => {

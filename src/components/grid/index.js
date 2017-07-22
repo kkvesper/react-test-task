@@ -1,4 +1,4 @@
-import './grid.scss';
+import './grid.less';
 
 import Box from './box';
 import Column from './column';
