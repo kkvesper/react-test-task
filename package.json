@@ -4,12 +4,14 @@
   "description": "React Test Task",
   "main": "index.js",
   "scripts": {
-    "start": "node --require babel-polyfill --require babel-register ./tools/webpack/start.js",
+    "start": "no",
+    "no": "no",
     "test": "eslint src tools --ext .js,.jsx"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "commander": "^2.11.0",
     "debug": "^2.2.0",
     "evil-icons": "^1.8.0",
     "express": "^4.13.4",
@@ -18,11 +20,7 @@
     "react-evil-icons": "^0.4.0",
     "react-redux": "^5.0.5",
     "redux": "^3.5.2",
-    "sancus": "^1.0.3",
-    "webpack": "^3.3.0",
-    "webpack-dev-middleware": "^1.6.1",
-    "webpack-dev-server": "^2.5.1",
-    "webpack-hot-middleware": "^2.10.0"
+    "webpack": "^3.3.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -42,10 +40,10 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.1.0",
-    "node-sass": "^4.5.3",
-    "react-hot-loader": "^1.3.0",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "nokit": "^0.24.5",
     "react-render": "^1.1.0",
-    "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2"
   }
 }
