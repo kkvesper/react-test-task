@@ -24,4 +24,9 @@ fork this repo, choose tasks to complete and once you are done send pull request
    * Feel free to update existing code for the better if you think it needs to.
    * You can add any modules that you required for the tasks or if you wanna add something.
 
+#### Development
+
+   0. Install dependencies `npm i`
+   0. Run the dev server `npm start`
+
 Good Luck!
