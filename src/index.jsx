@@ -1,10 +1,20 @@
 import React from 'react';
 import { render } from 'react-dom';
 import App from './app/app';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import reducer from './reducers'
+
+const store = createStore(reducer)
 
 try {
   const appContainer = document.getElementById('app');
-  render(<App />, appContainer);
+  render(
+    <Provider store={store}>
+      <App />
+    </ Provider>,
+    appContainer
+  );
 } catch (e) {
   /* eslint-disable no-console */
   console.warn('main.js is unable to find application container.');

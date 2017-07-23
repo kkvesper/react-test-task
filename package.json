@@ -40,6 +40,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.1.0",
+    "immutable": "^3.8.1",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "nokit": "^0.24.5",
