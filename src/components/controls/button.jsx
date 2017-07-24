@@ -10,8 +10,8 @@ const resolveButtonLabel = (children, label) => {
   return 'Label';
 };
 
-const Button = ({ children, label, onClick }) => (
-  <button onClick={onClick}>{resolveButtonLabel(children, label)}</button>
+const Button = ({ className, children, label, onClick }) => (
+  <button className={className} onClick={onClick}>{resolveButtonLabel(children, label)}</button>
 );
 
 Button.propTypes = {

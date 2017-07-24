@@ -1,20 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import './app.less';
-import { Column, Row, Title, Button } from '../components';
-import { connect } from 'react-redux'
-import { addContact } from '../actions'
+import { Column, Row, Title } from '../components';
 
+import Editor from './editor';
+import Contacts from './contacts';
 
-const App = ({ dispatch }) => {
-  const onAddClick = (event) => {
-    dispatch(addContact('ok'))
-  };
+const App = ({ dispatch }) => (<Column className="app">
+  <Row><Title>Contact Book</Title></Row>
 
-  return <Column className="app">
-    <Row><Title>Contact Book</Title></Row>
-    <Row><Button label="Add Contact" onClick={onAddClick} /></Row>
-  </Column>
-}
+  <Editor />
+  <Contacts />
+</Column>);
 
 export default connect()(App);
