@@ -7,7 +7,7 @@ fork this repo, choose tasks to complete and once you are done send pull request
 
 ### Tasks
 
-#### Redux / React
+#### Flux / React
 
    * When "Add Contact" button is clicked, new contact card should appear with following fields:
      * Name
