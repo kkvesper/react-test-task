@@ -6,9 +6,7 @@ export enum ActionType {
 
 type Path = string[]
 
-export interface Modify {
-    (type: ActionType, target, path: Path, val): void
-}
+type Modify = (type: ActionType, target, path: Path, val) => void
 
 export default function deepProxy (obj, cb: Modify, path: Path) {
     if (_.isObjectLike(obj) && !_.isDate(obj))  {
@@ -21,6 +19,7 @@ export default function deepProxy (obj, cb: Modify, path: Path) {
         } else if (_.isSet(obj) || _.isMap(obj)) {
             throw new TypeError('object Set and Map is not allowed')
         } else if (_.isPlainObject(obj)) {
+            // tslint:disable-next-line:forin
             for (const key in obj) {
                 obj[key] = deepProxy(obj[key], cb, <Path> path.concat(key))
             }
