@@ -6,8 +6,7 @@
   "private": true,
   "scripts": {
     "start": "no",
-    "no": "no",
-    "prepublish": "no build"
+    "no": "no"
   },
   "nofile": {
     "autoInstallDeps": true
