@@ -1,2 +1,8 @@
-*.log
 node_modules
+dist
+*.log
+.DS_Store
+mock/*
+!mock/readme.md
+
+/src/**/*.js
