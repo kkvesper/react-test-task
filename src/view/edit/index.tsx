@@ -3,7 +3,7 @@ import * as React from 'react'
 import { connect } from '../../lib/flusso'
 import edit from '../../store/edit'
 import contacts from '../../store/contacts'
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Grid, Row, Col } from 'react-flexbox-grid'
 import { Button } from '@blueprintjs/core'
 import * as querystring from 'querystring'
 
@@ -76,7 +76,7 @@ class Edit extends React.Component<any, any> {
                     <Col lg md sm xs>
                         <input type='submit'
                             className='pt-button pt-intent-primary'
-                            value={edit.store.contact.id ? 'Upate' : 'Add'}
+                            value={edit.store.contact.id ? 'Update' : 'Add'}
                         />
                     </Col>
                 </Row>

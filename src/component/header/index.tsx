@@ -12,10 +12,8 @@ class Header extends React.Component<IProps, any> {
                 <Link className="pt-navbar-heading" to='/'>
                     <b>Contact App</b>
                 </Link>
-            </div>
-            <div className="pt-navbar-group pt-align-right">
                 <button className="pt-button pt-minimal pt-intent-primary">
-                    {this.props.location}
+                    <b>{this.props.location}</b>
                 </button>
             </div>
         </nav>
