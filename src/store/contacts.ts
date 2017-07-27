@@ -23,12 +23,6 @@ class Contacts extends Store {
         list: {} as IContacts
     }
 
-    constructor () {
-        super()
-
-        this.add = this.add.bind(this)
-    }
-
     add () {
         const id = uuid()
 
