@@ -37,7 +37,7 @@
     "commander": "2.11.0",
     "css-loader": "0.28.4",
     "dom4": "1.8.3",
-    "febone-kit": "0.8.16",
+    "febone-kit": "^0.8.17",
     "file-loader": "0.11.2",
     "history": "3.3.0",
     "less": "2.7.2",
