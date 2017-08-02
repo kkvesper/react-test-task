@@ -1,16 +1,33 @@
-import React from 'react';
-
 import './app.scss';
-import { Column, Row, Title, Button } from '../components';
 
-const onAddClick = (event) => {
-};
+import React, { Component } from 'react';
 
-const App = () => (
-  <Column className="app">
-    <Row><Title>Contact Book</Title></Row>
-    <Row><Button label="Add Contact" onClick={onAddClick} /></Row>
-  </Column>
-);
+import { setup } from '../client/setup.js';
+import { Main } from '../ui/Main.jsx';
 
-export default App;
+var app = null;
+
+export const getApp = () => {
+    return app;
+}
+
+export class App extends Component {
+    componentWillMount(){
+        app = this;
+
+        this.setState({});
+    }
+    componentDidMount(){
+        setup();
+        this.setState({isAppMounted: true});
+    }
+    render() {
+        return ( this.state.isAppMounted == false ?
+            <div className="not-mounted">
+                not mounted bro
+            </div>
+        :
+            <Main />
+        );
+    }
+}

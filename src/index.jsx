@@ -1,9 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './app/app';
+import { App } from './app/app';
+
+import 'font-awesome/scss/font-awesome.scss';
 
 try {
-  const appContainer = document.getElementById('app');
+  const appContainer = document.getElementById('render-target');
   render(<App />, appContainer);
 } catch (e) {
   /* eslint-disable no-console */
