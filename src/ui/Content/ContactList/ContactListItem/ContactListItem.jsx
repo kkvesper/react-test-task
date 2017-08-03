@@ -1,7 +1,7 @@
 import './ContactListItem.scss';
 import React, { Component } from 'react';
 
-import { removeContact } from '../../../../client/contacts/manage-contacts.js';
+import { removeContact, toggleContactFavorite } from '../../../../client/contacts/manage-contacts.js';
 import { goToEditContact } from '../../../../client/router/change-page.js';
 
 export class ContactListItem extends Component {
@@ -11,8 +11,15 @@ export class ContactListItem extends Component {
 
     render() {
         return (
-          <tr>
-            <td> { this.props.fullName } </td>
+          <tr className="contact-list-item">
+            <td>
+                { this.props.isFavorite ?
+                    <i className="fa fa-star favorite-icon" aria-hidden="true" onClick={ () => toggleContactFavorite(this.props.index) }></i>
+                :
+                    <i className="fa fa-star-o favorite-icon" aria-hidden="true" onClick={ () => toggleContactFavorite(this.props.index) }></i>
+                }
+                { this.props.fullName }
+                </td>
             <td> { this.props.email } </td>
             <td> { this.props.phone } </td>
             <td className="clickable-block" onClick={ () => { goToEditContact(this.props.index); console.log('Editing: ' + this.props.index); } }>

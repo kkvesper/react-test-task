@@ -5,7 +5,7 @@ import { ContactListItem } from './ContactListItem/ContactListItem.jsx';
 
 export class ContactList extends Component {
     getListItems() {
-        return getContactList();
+        return getState()['contactList'];
     }
 
     render() {
@@ -28,7 +28,7 @@ export class ContactList extends Component {
                         <tbody>
                             { this.getListItems().map((contact, index) => (
                               <ContactListItem fullName={ contact.firstName + ' ' + contact.lastName } email={ contact.email }
-                                phone={ contact.phone } index={ index } key={ index }/>
+                                phone={ contact.phone } index={ index } isFavorite={ contact.isFavorite } key={ index }/>
                             )) }
                         </tbody>
 
