@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { ContactList } from './ContactList/ContactList.jsx';
 import { EditContact } from './EditContact/EditContact.jsx';
 import { NewContact } from './NewContact/NewContact.jsx';
+import { FavoriteList } from './FavoriteList/FavoriteList.jsx';
 
 import { getContactFromIndex } from '../../client/contacts/manage-contacts.js';
 
@@ -19,6 +20,8 @@ export class Content extends Component {
                 return <NewContact />;
             case "edit-contact":
                 return <EditContact contact={ getContactFromIndex(getCurrentlyViewedContact()) } index={ getCurrentlyViewedContact() }/>;
+            case "favorite-list":
+                return <FavoriteList />;
         }
     }
     render() {

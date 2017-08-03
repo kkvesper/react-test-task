@@ -2,7 +2,7 @@ import './NavBar.scss';
 
 import React, { Component } from 'react';
 
-import { goToContactList, goToAddNewContact} from '../../client/router/change-page.js';
+import { goToContactList, goToAddNewContact, goToFavoriteList } from '../../client/router/change-page.js';
 
 export class NavBar extends Component {
 
@@ -34,7 +34,7 @@ export class NavBar extends Component {
                     </div>
 
 
-                    <div className="nav-item clickable-block" onClick={ () => setCurrentPage('favorites') } >
+                    <div className="nav-item clickable-block" onClick={ () => goToFavoriteList() } >
                         <div className="icon-part">
                             <i className="fa fa-star" aria-hidden="true"></i>
                         </div>

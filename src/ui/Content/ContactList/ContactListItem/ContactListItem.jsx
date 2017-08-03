@@ -13,10 +13,14 @@ export class ContactListItem extends Component {
         return (
           <tr className="contact-list-item">
             <td>
-                { this.props.isFavorite ?
-                    <i className="fa fa-star favorite-icon" aria-hidden="true" onClick={ () => toggleContactFavorite(this.props.index) }></i>
+                { this.props.noFavoriteIcon == true ?
+                    null
                 :
-                    <i className="fa fa-star-o favorite-icon" aria-hidden="true" onClick={ () => toggleContactFavorite(this.props.index) }></i>
+                    ( this.props.isFavorite ?
+                        <i className="fa fa-star favorite-icon" aria-hidden="true" onClick={ () => toggleContactFavorite(this.props.index) }></i>
+                    :
+                        <i className="fa fa-star-o favorite-icon" aria-hidden="true" onClick={ () => toggleContactFavorite(this.props.index) }></i>
+                    )
                 }
                 { this.props.fullName }
                 </td>
