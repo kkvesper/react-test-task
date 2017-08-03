@@ -4,7 +4,10 @@ import { ContactListItem } from '../ContactList/ContactListItem/ContactListItem.
 
 export class FavoriteList extends Component {
     getListItems() {
-        return getState()['contactList'].filter((contact) => contact.isFavorite == true);
+        return getState()['contactList'].map((contact, index) => {
+            contact.index = index;
+            return contact;
+        }).filter((contact) => contact.isFavorite == true);
     }
 
     render() {
@@ -25,9 +28,9 @@ export class FavoriteList extends Component {
                             </tr>
                         </thead>
                         <tbody>
-                            { this.getListItems().map((contact, index) => (
+                            { this.getListItems().map((contact) => (
                               <ContactListItem fullName={ contact.firstName + ' ' + contact.lastName } email={ contact.email }
-                                phone={ contact.phone } index={ index } noFavoriteIcon={ true } key={ index }/>
+                                phone={ contact.phone } index={ contact.index } noFavoriteIcon={ true } key={ contact.index }/>
                             )) }
                         </tbody>
 
