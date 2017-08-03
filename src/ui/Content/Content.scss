@@ -1,9 +1,12 @@
 .content {
-    background-color: hsla(0,0%,80%,1);
+    background-color: hsla(0,0%,90%,1);
 
     .main-page {
         h1 {
             text-align: center;
+        }
+        .body {
+            margin: 0 calc(7% - 10px);
         }
     }
 }

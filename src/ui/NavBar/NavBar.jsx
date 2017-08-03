@@ -2,6 +2,8 @@ import './NavBar.scss';
 
 import React, { Component } from 'react';
 
+import { goToContactList, goToAddNewContact} from '../../client/router/change-page.js';
+
 export class NavBar extends Component {
 
     render() {
@@ -12,7 +14,7 @@ export class NavBar extends Component {
                 </div>
                 <div className="nav-list">
 
-                    <div className="nav-item clickable-block" onClick={ () => setCurrentPage('contacts') } >
+                    <div className="nav-item clickable-block" onClick={ () => goToContactList() } >
                         <div className="icon-part">
                             <i className="fa fa-users" aria-hidden="true"></i>
                         </div>
@@ -22,7 +24,7 @@ export class NavBar extends Component {
                     </div>
 
 
-                    <div className="nav-item clickable-block" onClick={ () => setCurrentPage('add-contact') } >
+                    <div className="nav-item clickable-block" onClick={ () => goToAddNewContact() } >
                         <div className="icon-part">
                             <i className="fa fa-plus-square" aria-hidden="true"></i>
                         </div>

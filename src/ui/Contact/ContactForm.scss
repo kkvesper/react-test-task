@@ -1,0 +1,30 @@
+.contact-form {
+
+    form {
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;            
+        }
+        label {
+            color: #106054;
+            font-weight: bold;
+        }
+    }
+    button.submit {
+        font-weight: bold;
+        width: 100%;
+        background-color: #18917E;
+        color: white;
+        padding: 14px 0;
+        margin-top: 30px;
+        border: none;
+        border-radius: 4px;
+    }
+
+}
+

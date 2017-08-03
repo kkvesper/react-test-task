@@ -20,9 +20,19 @@ export const setContactList = function(contactList){
     setState({ contactList: contactList });
 }
 
-export const getcontactList = function(){
+export const getContactList = function(){
     return getState()['contactList'];
 }
+
+export const setCurrentlyViewedContact = function(index){
+    return setState({currentlyViewedContact: index});
+}
+
+export const getCurrentlyViewedContact = function(){
+    return getState()['currentlyViewedContact'];
+}
+
+
 
 window.getState = getState;
 window.setState = setState;
@@ -31,4 +41,7 @@ window.setCurrentPage = setCurrentPage;
 window.getCurrentPage = getCurrentPage;
 
 window.setContactList = setContactList;
-window.getcontactList = getcontactList;
+window.getContactList = getContactList;
+
+window.setCurrentlyViewedContact = setCurrentlyViewedContact;
+window.getCurrentlyViewedContact = getCurrentlyViewedContact;

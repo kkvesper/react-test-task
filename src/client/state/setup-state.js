@@ -1,7 +1,6 @@
 import { setState, getState } from './manage-state.js';
 
 export const setupState = function(){
-    setState({});
     setCurrentPage('home');
     setContactList([
         {firstName: "Gael", lastName: "Flores", email: "flores.gael@gmail.com", phone: "0123456789"},

@@ -22,12 +22,12 @@ export class App extends Component {
         this.setState({isAppMounted: true});
     }
     render() {
-        return ( this.state.isAppMounted == false ?
+        return ( this.state.isAppMounted == true ?
+            <Main />
+        :
             <div className="not-mounted">
                 not mounted bro
             </div>
-        :
-            <Main />
         );
     }
 }
