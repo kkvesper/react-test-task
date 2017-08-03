@@ -1,0 +1,25 @@
+.nav-bar {
+    background-color: #1D1D1B;
+    color: #FEFCFA;
+
+    .description {
+        color: hsla(171,72%,23%,1);
+        margin: 22px 22px;
+        font-size: 24px;
+    }
+    .nav-list {
+        .nav-item {
+            display: flex;
+            flex-direction: row;
+            padding: 12px 0;
+            
+            .icon-part {
+                flex-basis: 66px;
+
+                i {
+                    margin-left: 22px;
+                }
+            }
+        }
+    }
+}

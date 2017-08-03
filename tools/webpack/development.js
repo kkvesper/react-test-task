@@ -31,8 +31,7 @@ const devConfig = {
         enforce: 'pre',
         test: /\.js(x|)$/,
         loaders: [
-          'babel-loader',
-          'eslint-loader'
+          'babel-loader'
         ],
         exclude: /node_modules/
       },
@@ -40,6 +39,12 @@ const devConfig = {
         test: /\.scss$/,
         loader: 'style-loader!css-loader!sass-loader'
       },
+      {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader']
+      },
+      { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'file-loader' },
+
       {
         test: /\.js(x|)$/,
         loaders: [

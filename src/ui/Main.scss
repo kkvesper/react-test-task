@@ -1,0 +1,40 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .side-part {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 250px;
+
+        .logo {
+            flex-basis: 50px;
+            background-color: #18917E;
+            color: #FEFCFA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .nav-bar {
+            flex-grow: 1;
+        }
+
+    }
+
+    .central-part {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        .header {
+            flex-basis: 50px;
+        }
+        .content {
+            flex-grow: 1;
+        }
+    }
+}
+
